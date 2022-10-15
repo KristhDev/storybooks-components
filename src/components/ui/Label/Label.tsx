@@ -11,6 +11,11 @@ interface Props {
     allCapitalize?: boolean;
 
     /**
+     * This is the background color of the label
+    */
+    backgroundColor?: string;
+
+    /**
      * This is the color of the label
     */
     color?: 'primary' | 'secondary' | 'tertiary';
@@ -31,11 +36,11 @@ interface Props {
     text: string;
 }
 
-export const Label: FC<Props> = ({ allCapitalize = false, color = 'primary', fontColor, size = 'normal', text = 'No label' }) => {
+export const Label: FC<Props> = ({ allCapitalize = false, backgroundColor = 'transparent', color = 'primary', fontColor, size = 'normal', text = 'No label' }) => {
     return (
         <span 
             className={ `label ${ size } text-${ color }` }
-            style={{ color: fontColor }}
+            style={{ backgroundColor, color: fontColor }}
         >
             { (allCapitalize) ? text.toUpperCase() : text }
         </span>
