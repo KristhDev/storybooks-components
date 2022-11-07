@@ -4,7 +4,7 @@ import { Header } from './Header';
 
 import './page.css';
 
-type User = {
+export type User = {
   name: string;
 };
 

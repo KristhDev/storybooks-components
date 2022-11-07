@@ -2,7 +2,7 @@ import React from 'react';
 
 import './button.css';
 
-interface ButtonProps {
+export interface ButtonProps {
   primary?: boolean;
   backgroundColor?: string;
   size?: 'small' | 'medium' | 'large';
